@@ -3,15 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TestSomething — Task Board</title>
+  <title>TestSomething — Task Board + Pomodoro</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="app">
     <header>
       <h1>Task Board</h1>
-      <p class="subtitle" id="edition">Bản cơ bản · nhánh main</p>
+      <p class="subtitle" id="edition">Bản Pomodoro · nhánh feature/pomodoro-timer</p>
     </header>
+
+    <section class="pomodoro" aria-label="Pomodoro timer">
+      <div class="timer-ring">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="ring-bg" cx="60" cy="60" r="54" />
+          <circle class="ring-progress" id="ringProgress" cx="60" cy="60" r="54" />
+        </svg>
+        <span class="timer-display" id="timerDisplay">25:00</span>
+      </div>
+      <p class="timer-label" id="timerLabel">Tập trung làm việc</p>
+      <div class="timer-actions">
+        <button type="button" id="timerStart">Bắt đầu</button>
+        <button type="button" id="timerReset" class="secondary">Reset</button>
+      </div>
+    </section>
 
     <section class="add-task">
       <input type="text" id="taskInput" placeholder="Việc cần làm…" autocomplete="off" />
@@ -22,9 +37,11 @@
 
     <footer>
       <span id="stats">0 việc</span>
+      <span id="pomodoroStats"> · 0 pomodoro hôm nay</span>
     </footer>
   </div>
 
   <script src="app.js"></script>
+  <script src="timer.js"></script>
 </body>
 </html>

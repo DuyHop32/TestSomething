@@ -4,8 +4,8 @@
   --border: #2d3a4f;
   --text: #e7ecf3;
   --muted: #8b9cb3;
-  --accent: #3b82f6;
-  --accent-hover: #2563eb;
+  --accent: #f97316;
+  --accent-hover: #ea580c;
   --danger: #ef4444;
   --success: #22c55e;
 }
@@ -125,4 +125,72 @@ footer {
   margin-top: 1.25rem;
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.pomodoro {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.timer-ring {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 0.5rem;
+}
+
+.timer-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 8;
+}
+
+.ring-progress {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.timer-display {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.timer-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+button.secondary {
+  background: var(--border);
+  color: var(--text);
+}
+
+button.secondary:hover {
+  background: #3d4d66;
 }

@@ -1,15 +1,8 @@
 # TestSomething — Worktree Demo
 
-Demo **quản lý công việc (Task Board)** dùng **2 Git worktree** trên 2 nhánh:
+Demo **Task Board + Pomodoro** trên nhánh `feature/pomodoro-timer` (worktree `TestSomething-wt-timer`).
 
-| Worktree | Nhánh | Tính năng |
-|----------|--------|-----------|
-| `TestSomething` | `main` | Bản **cơ bản** — thêm / xóa task |
-| `TestSomething-wt-timer` | `feature/pomodoro-timer` | Bản **nâng cao** — thêm Pomodoro timer |
-
-## Chạy demo
-
-Mở `index.html` trong trình duyệt (Live Server hoặc double-click).
+So với `main`: thêm timer 25/5 phút, vòng progress, đếm pomodoro trong ngày.
 
 ## Worktree
 
@@ -17,6 +10,9 @@ Mở `index.html` trong trình duyệt (Live Server hoặc double-click).
 git worktree list
 ```
 
-## Remote
+| Folder | Nhánh |
+|--------|--------|
+| `TestSomething` | `main` — Task Board cơ bản |
+| `TestSomething-wt-timer` | `feature/pomodoro-timer` — + Pomodoro |
 
-`https://github.com/zozoitdd/TestSomething.git`
+Remote: https://github.com/zozoitdd/TestSomething.git
