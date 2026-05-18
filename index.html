@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TestSomething — Task Board</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Task Board</h1>
+      <p class="subtitle" id="edition">Bản cơ bản · nhánh main</p>
+    </header>
+
+    <section class="add-task">
+      <input type="text" id="taskInput" placeholder="Việc cần làm…" autocomplete="off" />
+      <button type="button" id="addBtn">Thêm</button>
+    </section>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <footer>
+      <span id="stats">0 việc</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
